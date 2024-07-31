@@ -1,0 +1,122 @@
+@import url("reset.css");
+
+:root{
+    --violet:hsl(257, 40%, 49%);
+    --soft-magenta:hsl(300, 69%, 71%);
+}
+
+*{
+    font-family: "Open Sans";
+}
+
+header img{
+    width:10rem;
+}
+
+main img{
+    width:100%;
+}
+
+h1,p{
+    color:white;
+}
+
+h1{
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 25px;
+}
+
+p{
+    font-weight: 400;
+}
+
+body{
+    padding:2rem;
+    background-color: var(--violet);
+    background-image: url("../images/bg-mobile.svg");
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    gap:4rem;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+}
+
+.text-container{
+    text-align: center;
+}
+
+/* Button Styling*/
+
+button{
+    cursor: pointer;
+    padding:0.7rem min(20%,4rem);
+    border-radius: 25px;
+    border:0;
+    color:var(--violet);
+    font-weight: 600;
+    box-shadow: 1px 5px 5px 0px rgb(81, 58, 139);
+}
+
+button:hover{
+    background-color: var(--soft-magenta);
+    color:white;
+}
+
+/* Social Icons Styling*/
+
+footer{
+    display: flex;
+    gap:0.5rem;
+    justify-content: center;
+}
+
+i{
+    cursor: pointer;
+    color:white;
+    padding:0.5rem;
+    border: 1px solid;
+    border-radius: 100%;
+}
+
+i:first-child{
+    padding:0.5rem 0.65rem;
+}
+
+i:hover{
+    color:var(--soft-magenta);
+}
+
+@media (min-width:50em){
+    h1{
+        font-size: 40px;
+    }
+    
+    body{
+        background-image: url("../images/bg-desktop.svg");
+        background-repeat: no-repeat;
+    }
+
+    main{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .text-container{
+        text-align: left;
+    }
+
+    main img{
+        width:50%;
+    }
+
+    footer{
+        justify-content: right;
+    }
+}
